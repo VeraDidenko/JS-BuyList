@@ -1,0 +1,57 @@
+.bl-background {
+    background: #cdcbcb;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+}
+.bl-bought {
+    background: pink;
+    float: left;
+    width: 20%;
+}
+.bl-list {
+    background: green;
+    margin-right: 20px;
+    margin-left: 10%;
+    float: left;
+    width: 50%;    
+}
+.bl-product {
+    background: blue;
+    margin-bottom: 10;
+    float: left;
+    width: 10%;   
+}
+.bl-buttons{
+    background: yellow;
+    float: right;
+    width: 40%;  
+}
+
+
+/*Кнопки*/
+.bl-minus {
+    background: #f2a2b0;
+    border: 0px;
+    border-color: darkgrey;
+    width: 25px;
+    height: 25px;
+    color: white;
+    border-radius: 25px;
+}
+.bl-label {
+    background: #cdcbcb;
+    margin: 10px;
+    width: 30px;
+    height: 25px;
+    border-radius: 1px;
+}
+.bl-plus {
+    background: #2ac738;
+    border: 0px;
+    border-color: darkgrey;
+    width: 25px;
+    height: 25px;
+    color: white;
+    border-radius: 25px;
+}
