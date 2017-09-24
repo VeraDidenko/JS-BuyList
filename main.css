@@ -1,57 +1,235 @@
-.bl-background {
-    background: #cdcbcb;
-    padding: 20px;
+body {
+    background-color: #dedede;
+}
+.bl-leftcolumn {
+    margin: 10px;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px 2px #aaa7a7;
+    width:65%;
+    float:left;
+    box-sizing: border-box;
+    min-width: 500px;
+}
+.bl-rightcolumn {
+    margin: 10px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px 2px #aaa7a7;
+    background-color: white;
+    width: 30%;
+    min-width: 150px;
+    float:left;
+    box-sizing: border-box;
+}
+.bl-background{
+    display:block;
+    margin: 100px auto;
+    width:80%;
     height: 100%;
-    width: 100%;
 }
-.bl-bought {
-    background: pink;
-    float: left;
+.bl-input{
+    display: block;
+    padding:25px;
+    width:100%;
+    height:100px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    border-bottom:1px solid #d4d3d3;
+}
+.bl-user{
+    box-sizing: border-box;
+    width: 80%;
+    height: 50px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    padding-left:15px;
+    font-size: 18px;
+    font-family: sans-serif;
+    border: 1px solid rgba(34,36,38,.15);
+    box-shadow: 0 0 0 0 transparent inset;
+    outline:none;
+}
+.bl-user:focus{
+    border: 1px solid #329cde;
+}
+.bl-user:focus::-webkit-input-placeholder {
+    color: black;
+}
+
+.bl-add{
+    background-color:#329cde;
+    color:white;
+    box-sizing: border-box;
+    min-width: 70px;
+    border-color:#329cde;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    height: 50px;
     width: 20%;
+    font-family: sans-serif;
+    outline: none;
 }
-.bl-list {
-    background: green;
-    margin-right: 20px;
-    margin-left: 10%;
-    float: left;
-    width: 50%;    
+.bl-add:hover{
+    background-color:#18618e;
+    border-color:#18618e;
 }
-.bl-product {
-    background: blue;
-    margin-bottom: 10;
+.bl-row{
+    width:100%;
+    height:65px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    border-bottom:1px solid #d4d3d3;
+}
+.bl-row:last-child{
+    border-bottom:0;
+}
+.column-products{
+    width:30%;
+    padding: 20px;
+    float:left;
+    box-sizing: border-box;
+}
+.bl-count{
+    padding: 15px;
+    width: 30%;
+    text-align: center;
     float: left;
-    width: 10%;   
+    box-sizing: border-box;
 }
 .bl-buttons{
-    background: yellow;
-    float: right;
-    width: 40%;  
+    padding: 15px;
+    width: 40%;
+    text-align: right;
+    float:left;
+    box-sizing: border-box;
 }
-
-
-/*Кнопки*/
+.bl-product{
+    font-size: 18px;
+    text-align: left;
+    font-family: sans-serif;
+}
 .bl-minus {
-    background: #f2a2b0;
-    border: 0px;
-    border-color: darkgrey;
-    width: 25px;
-    height: 25px;
-    color: white;
+    height:35px;
+    width:35px;
     border-radius: 25px;
+    color:white;
+    background: #ea1222;
+    border-color: transparent;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin-right:2px;
+    outline: none;
+}
+.bl-minus:hover{
+    background: #ad0404;
+    border-color: transparent;
 }
 .bl-label {
-    background: #cdcbcb;
-    margin: 10px;
-    width: 30px;
-    height: 25px;
-    border-radius: 1px;
+    height:25px;
+    width:25px;
+    background: #e2dede;
+    display:inline-block;
+    border-radius: 5px;
+    font-size: 15px;
+    padding-top: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-family: sans-serif;
+    margin-right:2px;
 }
 .bl-plus {
-    background: #2ac738;
-    border: 0px;
-    border-color: darkgrey;
-    width: 25px;
-    height: 25px;
-    color: white;
+    height:35px;
+    width:35px;
     border-radius: 25px;
+    color:white;
+    background: #04a613;
+    border-color: transparent;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: sans-serif;
+    outline: none;
+}
+.bl-plus:hover{
+    background: #135a19;
+    border-color: transparent;
+}
+.bl-boughtbutton{
+    background: #e2dede;
+    height:35px;
+    width:100px;
+    margin-right:2px;
+    border-radius: 5px;
+    border-color: #e2dede;
+    font-size: 15px;
+    font-family: sans-serif;
+    outline: none;
+}
+.bl-boughtbutton:hover{
+    background: #c3c1c1;
+    border-color: #c3c1c1;
+}
+.bl-deletebutton{
+    height:35px;
+    width:35px;
+    border-radius: 5px;
+    background: #ea1222;
+    border-color: #ea1222;
+    color:white;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: sans-serif;
+    outline: none;
+}
+.bl-deletebutton:hover{
+    background: #ad0404;
+    border-color: #ad0404;
+}
+.bl-title{
+    width:100%;
+    height:65px;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom:1px solid #d4d3d3;
+    font-family: sans-serif;
+}
+.left-products, .bought-products{
+    width:100%;
+    padding: 15px;
+    box-sizing: border-box;
+    border-bottom:1px solid #d4d3d3;
+}
+.bl-left-product{
+    background:#e2dede;
+    display: inline-block;
+    box-sizing: border-box;
+    padding:5px;
+    margin:1px;
+    border-radius: 5px;
+}
+.bl-name{
+    color: #626060;
+    font-family: sans-serif;
+    font-size: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.bl-amount{
+    display: inline-block;
+    width:20px;
+    height:20px;
+    min-width:25px;
+    padding-top:5px;
+    border-radius: 15px;
+    background: #ff8900;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 10px;
+    font-family: sans-serif;
 }
