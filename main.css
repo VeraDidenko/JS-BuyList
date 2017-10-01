@@ -2,7 +2,10 @@ body {
     background-color: #dedede;
 }
 .leftcolumn-container{
-    padding:10px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:10px;
+    padding-bottom:100px;
     width:60%;
     min-width: 500px;
     float:left;
@@ -17,7 +20,10 @@ body {
 .rightcolumn-container{
     width:40%;
     float:left;
-    padding:10px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:10px;
+    padding-bottom:100px;
     box-sizing: border-box;
 }
 .bl-rightcolumn {
@@ -115,6 +121,19 @@ body {
     text-align: left;
     font-family: sans-serif;
 }
+.edit-product{
+    border-radius: 5px;
+    padding-left:5px;
+    padding-top:3px;
+    padding-bottom:3px;
+    border: 1px solid rgba(34,36,38,.15);
+    box-shadow: 0 0 0 0 transparent inset;
+    outline:none;
+
+}
+.edit-product:focus{
+    border: 1px solid #329cde;
+}
 .bl-minus {
     height:35px;
     width:35px;
@@ -172,7 +191,34 @@ body {
     font-family: sans-serif;
     outline: none;
 }
+.bl-row .bl-notboughtbutton{
+    display: none;
+}
+.bl-row.is-bought button{
+    display: none;
+}
+.bl-row.is-bought .bl-notboughtbutton{
+    display: inline;
+}
+.bl-row.is-bought .bl-product{
+    text-decoration: line-through;
+}
 .bl-boughtbutton:hover{
+    background: #c3c1c1;
+    border-color: #c3c1c1;
+}
+.bl-notboughtbutton{
+    background: #e2dede;
+    height:35px;
+    width:100px;
+    margin-right:2px;
+    border-radius: 5px;
+    border-color: #e2dede;
+    font-size: 15px;
+    font-family: sans-serif;
+    outline: none;
+}
+.bl-notboughtbutton:hover{
     background: #c3c1c1;
     border-color: #c3c1c1;
 }
@@ -238,6 +284,37 @@ body {
     font-size: 10px;
     font-family: sans-serif;
 }
+.bl-bought-product{
+    background:#e2dede;
+    display: inline-block;
+    box-sizing: border-box;
+    padding:5px;
+    margin:1px;
+    border-radius: 5px;
+}
+.bl-bought-name{
+    color: #626060;
+    font-family: sans-serif;
+    font-size: 10px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: line-through;
+}
+.bl-bought-amount{
+    display: inline-block;
+    width:20px;
+    height:20px;
+    min-width:25px;
+    padding-top:5px;
+    border-radius: 15px;
+    background: #ff8900;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 10px;
+    font-family: sans-serif;
+    text-decoration: line-through;
+}
 .my_page_badge{
     transition: all 1s ease;
     position:fixed;
@@ -255,7 +332,7 @@ body {
 .my_page_badge:hover{
     transform: translateY(-1px);
     bottom: 0;
-    background: #ff0089;
+    background: forestgreen;
 }
 .badge_title{
     padding: 20px;
@@ -298,28 +375,15 @@ body {
         width:20%;
     }
     .bl-title{
-        font-size: 18px;
+        font-size: 15px;
     }
 
 }
 
-/*@media(max-width:900px){
-    .bl-background{
-        width:90%;
-    }
-    .bl-title{
-        font-size: 12px;
-    }
-    .leftcolumn-container{
-        width:82%;
-    }
-    .rightcolumn-container{
-        width:18%;
-    }
-}*/
 @media(max-width:900px){
     .leftcolumn-container{
         width:100%;
+        padding-bottom:10px;
     }
     .rightcolumn-container{
         width:100%;
