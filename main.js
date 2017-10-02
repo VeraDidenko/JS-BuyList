@@ -10,6 +10,7 @@ $(function (){
         var $node = $(ONE_ROW_HTML);
         var $node_left = $(ONE_PRODUCT_HTML);
         var $node_bought = $(ONE_BOUGHT_HTML);
+        var canChange = true;
 
         var amount = 1;
         var $amount_label = $node.find(".bl-label");
@@ -48,25 +49,31 @@ $(function (){
 
         });
 
-        $node.find(".bl-product").click(function() {
-            $node.find(".bl-product").hide();
-            $node.find(".edit-product").show();
-            $node.find(".edit-product").val(title);
-            $node_left.find(".bl-name").val(title);
-            $node_bought.find(".bl-bought-name").val(title);
+        $node.find(".bl-product").click(function(){
+            if(canChange){
+                $node.find(".bl-product").hide();
+                $node.find(".edit-product").show().focus();
+                $node.find(".edit-product").val(title);
+                $node_left.find(".bl-name").val(title);
+                $node_bought.find(".bl-bought-name").val(title);
+            }
+
         });
         $node.find(".edit-product").focusout(function(){
-            $node.find(".bl-product").show();
-            $node.find(".edit-product").hide();
-            title = $node.find(".edit-product").val();
-            $node.find(".bl-product").text(title);
-            $node_left.find(".bl-name").text(title);
-            $node_bought.find(".bl-bought-name").text(title);
+            if(canChange){
+                $node.find(".bl-product").show();
+                $node.find(".edit-product").hide();
+                title = $node.find(".edit-product").val();
+                $node.find(".bl-product").text(title);
+                $node_left.find(".bl-name").text(title);
+                $node_bought.find(".bl-bought-name").text(title);
+            }
         });
 
         $node.find(".bl-deletebutton").click(function() {
             $node.hide();
             $node_left.hide();
+            $node_bought.hide();
         });
 
         $node.find(".bl-boughtbutton").click(function() {
@@ -74,12 +81,15 @@ $(function (){
             $node_left.hide();
             $bought.append($node_bought);
             $node_bought.show();
+            canChange = false;
         });
 
         $node.find(".bl-notboughtbutton").click(function() {
             $node.removeClass("is-bought");
             $node_left.show();
             $node_bought.hide();
+            canChange = true;
+
         });
 
 
